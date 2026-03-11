@@ -12,20 +12,21 @@ import {
 } from "@react-three/rapier";
 
 const textureLoader = new THREE.TextureLoader();
+const BASE = import.meta.env.BASE_URL;
 const imageUrls = [
-  "/images/java.png",
-  "/images/html5.png",
-  "/images/css3.png",
-  "/images/javascript.png",
-  "/images/mysql.png",
-  "/images/oracle.png",
-  "/images/spring.png",
-  "/images/springboot.png",
-  "/images/hibernate.png",
-  "/images/git.png",
-  "/images/github.png",
-  "/images/visualstudiocode.png",
-  "/images/intellijidea.png",
+  `${BASE}images/java.png`,
+  `${BASE}images/html5.png`,
+  `${BASE}images/css3.png`,
+  `${BASE}images/javascript.png`,
+  `${BASE}images/mysql.png`,
+  `${BASE}images/oracle.png`,
+  `${BASE}images/spring.png`,
+  `${BASE}images/springboot.png`,
+  `${BASE}images/hibernate.png`,
+  `${BASE}images/git.png`,
+  `${BASE}images/github.png`,
+  `${BASE}images/visualstudiocode.png`,
+  `${BASE}images/intellijidea.png`,
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -204,7 +205,7 @@ const TechStack = () => {
           ))}
         </Physics>
         <Environment
-          files="/models/char_enviorment.hdr"
+          files={`${import.meta.env.BASE_URL}models/char_enviorment.hdr`}
           environmentIntensity={0.5}
           environmentRotation={[0, 4, 2]}
         />

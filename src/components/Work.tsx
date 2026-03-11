@@ -3,24 +3,25 @@ import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
+const BASE = import.meta.env.BASE_URL;
 const projects = [
   {
     title: "Asset Maintenance Manager",
     category: "Full-Stack System",
     tools: "Java, Servlets, JDBC, PostgreSQL",
-    image: "/images/Solidx.png",
+    image: `${BASE}images/Solidx.png`,
   },
   {
     title: "EARLYSTEP",
     category: "Health Web App",
     tools: "React.js, JavaScript, HTML, CSS",
-    image: "/images/radix.png",
+    image: `${BASE}images/radix.png`,
   },
   {
     title: "DHANWIN CLUB",
     category: "Sports Platform",
     tools: "HTML, CSS, JavaScript",
-    image: "/images/bond.png",
+    image: `${BASE}images/bond.png`,
   },
 ];
 
